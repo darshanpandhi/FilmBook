@@ -1,0 +1,61 @@
+
+* {
+    padding:10px;
+}
+
+.header 
+{
+    position: sticky;
+    top: 0;
+    height: 100px;
+    background-color: rgb(100,100,100);
+}
+
+.footer
+{
+    border: 5px solid black;
+    clear:left;
+    margin:auto;
+    align-content: center;
+    background-color: rgb(60,60,60);
+    padding: 25px;
+    text-align: center;
+    color: white;
+}
+div.footer_2
+{
+    clear:left;
+    background-color: rgb(30,30,30);
+    padding: 50px;
+    text-align: center;
+    font-size: x-large;
+    color: white;
+}
+.content {
+    margin:auto;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(60,60,60)
+}
+
+#poster {
+    float: left;
+    max-height:25vw;
+    width:100%;
+    width:auto;
+}
+
+.description {
+    float:center;
+    min-height: 25vw;
+}
+
+
+#confirm {
+    margin:auto;
+    float:right;
+}
+
+#back {
+    margin:auto;
+    float:left;
+}
