@@ -9,15 +9,16 @@
         margin-top:0px;
     }
 .form-popup {
+    color:white;
     display:none;
     max-width: 200px;
     padding: 15px;
-    background-color: white;
     position: fixed;
     top: 0;
     right:20px;
-    border: 3px solid #D8D8D8;
+    border: 3px solid white;
     z-index: 10;
+    background-color: rgb(100,100,100);
 }
 .form-popup input[type=text], .form-popup input[type=password] {
     width: 100%;
@@ -29,7 +30,8 @@
 }
 
 #login {
-    margin-left:5px;
+    margin-left:60px;
+    margin-bottom: 10px;
     background-color:green;
     color: white;
     padding: 16px 20px;
@@ -41,25 +43,26 @@
 
 }
 #cancel {
-    margin-left:5px;
+    margin-left:70px;
     background-color:red;
     color: white;
-    padding: 16px 20px;
+    padding: 10px 10px 10px 10px;
     border: none;
     cursor: pointer;
-    width: 45%;
-
-    opacity: 0.8;
+    position: fixed;
+    top:3px;
+    right: 23px;
+    opacity: 1;
 }
 #open{
-
     background-color: #7f7f7f;
     color: white;
     border: none;
     cursor: pointer;
     position: fixed;
-    top: 0;
-    right:20px;
+    top: 1.5%;
+    right:30px;
+
     z-index: 10;
     padding: 16px 20px;
     margin: 3px;
@@ -71,7 +74,10 @@
 </head>
 <body>
 <div class="form-popup" id="popUp">
-    <h1>Login</h1>
+    <h1>Login
+        <button type="submit" id="cancel" onclick="closePopUp()">X</button>
+    </h1>
+
     <label><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="Username" required>
 
@@ -79,7 +85,7 @@
     <input type="password" placeholder="Enter Password" name="Password" required>
     <div class="btn" >
         <button type="submit" id="login">Login</button>
-        <button type="submit" id="cancel" onclick="closePopUp()">Close</button>
+
     </div>
      <div class="word" style="text-align: center">
          <a href="">  not a member yet? click here to register</a>
