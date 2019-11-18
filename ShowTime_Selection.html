@@ -2,12 +2,32 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="ShowTime_Selection.css">
+    <script src="ShowTime_Selection.js"></script>
     <title>Showtime Selection</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 
 <body>
+
+<div class="form-popup" id="popUp">
+        <h1>Login</h1>
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="Username" required>
+
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="Password" required>
+        <div class="btn" >
+            <button type="submit" id="login">Login</button>
+            <button type="submit" id="cancel" onclick="closePopUp()">Close</button>
+        </div>
+        <div class="word" style="text-align: center">
+            <a href="">  not a member yet? click here to register</a>
+        </div>
+    </div>
+    <div class="login-form" id="loginForm">
+        <button class="open-button" id="open" onclick= "openPopUp()">Log in</button>
+    </div>
 <div class = "header">
 <a href="index.html">
         <img src="img/logo.png" alt="The website logo">
@@ -17,7 +37,9 @@
 
 <div class = "content">
 
-    <div class = "layout">
+    <div class = "movie_layout">
+        <img id = "step1" src = "img/step1.png">
+        <br>
         <img id="poster" src = "weathering with you.jpg" width="1936" height ="2731">
 
         <div class = "description">
@@ -31,24 +53,51 @@
                     Things begin looking up for them at first. However, it is common knowledge that power always comes with a hefty price...</p>
         </div>
     </div>
-</div>
-
-<div class = "footer">
-    <div class = "selection">
-            <h1 id = "showtimes">Showtimes</h1>
-            <button id = "theatre">Theatre</button>
-            <button id = "date">Date</button>
-        </div>
     
-        <div class = "navigation">
-            <button id = "confirm">Confirm</button>
-            <a href = "index.html">
-            <button id = "back">Back</button>
-            </a>
-        </div>
+    <div class = "buttons">
+                <h1 id = "showtimes">Choose Theatre and ShowTime </h1>
+                <br>
+                <div class="select" style="width:200px;">
+                        <select id = theatre>
+                          <option value="0">Select Theatre:</option>
+                          <option value="1" onClick = "displayDate()">Cineplex Odeon Cinemas VIP</option>
+                          <option value="2" onClick = "displayDate()">Silvercity St. Vital Cinemas</option>
+                        </select>
+                      </div>
 
+                <div class="select" style="width:200px;">
+                    <select id = date>
+                        <option value="0">Select Date:</option>
+                        <option value="1" onClick = "displayShowtime()">November 18th</option>
+                        <option value="2" onClick = "displayShowtime()">November 19th</option>
+                        <option value="3" onClick = "displayShowtime()">November 20th</option>
+                    </select>
+                    </div>
+
+                <div class="select" style="width:200px;">
+                        <select id = showtime>
+                            <option value="0">Select Showtime:</option>
+                            <option value="1" onClick = "displayConfirm()">1:30 pm</option>
+                            <option value="2" onClick = "displayConfirm()">5:30pm</option>
+                            <option value="3" onClick = "displayConfirm()">7:30pm</option>
+                        </select>
+                        </div>
+                        <br>
+            <div class = "navigation">
+                <a href = "index.html">
+                        <button id = "back">Back</button>
+                        </a>
+                <a href = "#">
+                        <button id = "confirm">Confirm</button>
+                        </a>
+               
+            </div>
+        
+        </div>
 </div>
-<div class="footer_2">
+
+
+<div class="footer">
         Footer
     </div>
 </body>

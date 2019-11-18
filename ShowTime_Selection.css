@@ -1,6 +1,58 @@
 
 * {
-    padding:10px;
+    margin:auto;
+}
+
+.form-popup {
+    display:none;
+    max-width: 200px;
+    padding: 15px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right:20px;
+    border: 3px solid #D8D8D8;
+    z-index: 10;
+}
+.form-popup input[type=text], .form-popup input[type=password] {
+    width: 100%;
+    padding-top: 5px ;
+    padding-right: 5px;
+    margin: 5px 0 20px 0;
+    border: none;
+    background:#D8D8D8;
+}
+#login {
+    margin-left:5px;
+    background-color:green;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 45%;
+    opacity: 0.8;
+}
+#cancel {
+    margin-left:5px;
+    background-color:red;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 45%;
+    opacity: 0.8;
+}
+#open{
+    background-color: #7f7f7f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    right:20px;
+    z-index: 10;
+    padding: 16px 20px;
+    margin: 3px;
 }
 
 .header 
@@ -11,9 +63,9 @@
     background-color: rgb(100,100,100);
 }
 
-.footer
+.buttons
 {
-    border: 5px solid black;
+    /*!-- border: 5px solid black;*/
     clear:left;
     margin:auto;
     align-content: center;
@@ -22,7 +74,18 @@
     text-align: center;
     color: white;
 }
-div.footer_2
+
+.content {
+    display:block;
+    margin:auto;
+    background-color: rgb(60,60,60);
+}
+
+.buttons {
+    display:block;
+}
+
+div.footer
 {
     clear:left;
     background-color: rgb(30,30,30);
@@ -31,31 +94,84 @@ div.footer_2
     font-size: x-large;
     color: white;
 }
-.content {
-    margin:auto;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: rgb(60,60,60)
-}
 
+
+#step1 {
+    width:605px;
+    height:109x;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width:40%;
+    padding:10px;
+
+}
 #poster {
     float: left;
-    max-height:25vw;
-    width:100%;
-    width:auto;
+    width:210px;
+    height:280px;
+    padding:10px;
 }
 
 .description {
+    color:black;
     float:center;
-    min-height: 25vw;
 }
 
-
-#confirm {
-    margin:auto;
-    float:right;
+#movie, #cast, #director {
+    font-size: x-large;
+    color:lightblue;
 }
 
-#back {
-    margin:auto;
-    float:left;
+#synopsis {
+    margin: 15px;
+    text-align:justify;
+    text-justify: inter-word;
+    font-size: large;
+    color:white;
 }
+.selection {
+    height: 200px;
+}
+
+#showtimes {
+    color:yellow;
+}
+#back, #confirm {
+    background-color: rgb(40, 26, 231);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .select {
+      
+      float:center;
+      padding:15px;
+  }
+
+  #showtime,#date,#confirm {
+      display:none;
+  }
+
+ /* .theatre_dropdown, .time_dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .theatres, .times{
+    display: none;
+    position: absolute;
+    background-color:black;
+    min-width: 200px;
+    padding: 12px 16px;
+  } */
+
+  /* .theatre_dropdown:hover .theatres {
+    display: block;
+  }
+  .time_dropdown:hover .times {
+    display: block;
+  } */
