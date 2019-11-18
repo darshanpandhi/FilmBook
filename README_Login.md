@@ -1,4 +1,4 @@
 # LogIn:
-Fixed position\n
-Changed color so it fit the theme\n
-Changed close button
+-Fixed position
+-Changed color so it fit the theme
+-Changed close button
