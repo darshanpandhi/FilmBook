@@ -58,28 +58,28 @@
                 <h1 id = "showtimes">Choose Theatre and ShowTime </h1>
                 <br>
                 <div class="select" style="width:200px;">
-                        <select id = theatre>
+                        <select id = "theatre" onchange="displayDate();">
                           <option value="0">Select Theatre:</option>
-                          <option value="1" onClick = "displayDate()">Cineplex Odeon Cinemas VIP</option>
-                          <option value="2" onClick = "displayDate()">Silvercity St. Vital Cinemas</option>
+                          <option value="1" >Cineplex Odeon Cinemas VIP</option>
+                          <option value="2" >Silvercity St. Vital Cinemas</option>
                         </select>
                       </div>
 
                 <div class="select" style="width:200px;">
-                    <select id = date>
+                    <select id = date onchange="displayShowtime();"> 
                         <option value="0">Select Date:</option>
-                        <option value="1" onClick = "displayShowtime()">November 18th</option>
-                        <option value="2" onClick = "displayShowtime()">November 19th</option>
-                        <option value="3" onClick = "displayShowtime()">November 20th</option>
+                        <option value="1" >November 18th</option>
+                        <option value="2" >November 19th</option>
+                        <option value="3" >November 20th</option>
                     </select>
                     </div>
 
                 <div class="select" style="width:200px;">
-                        <select id = showtime>
+                        <select id = showtime onchange="displayConfirm();">
                             <option value="0">Select Showtime:</option>
-                            <option value="1" onClick = "displayConfirm()">1:30 pm</option>
-                            <option value="2" onClick = "displayConfirm()">5:30pm</option>
-                            <option value="3" onClick = "displayConfirm()">7:30pm</option>
+                            <option value="1" >1:30 pm</option>
+                            <option value="2" >5:30pm</option>
+                            <option value="3" >7:30pm</option>
                         </select>
                         </div>
                         <br>
