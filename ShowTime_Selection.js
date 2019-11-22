@@ -8,17 +8,17 @@ function closePopUp(){
 }
 
 
-displayDate()
+function displayDate()
 {
     document.getElementById("date").style.display ="block";
 }
 
-displayShowtime()
+function displayShowtime()
 {
     document.getElementById("showtime").style.display ="block";
 }
 
-displayConfirm()
+function displayConfirm()
 {
     document.getElementById("confirm").style.display = "block";
 }
