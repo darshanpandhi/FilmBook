@@ -11,9 +11,9 @@ h1
     position: fixed;
     top: 0;
     right:20px;
-    border: 3px solid white;
+    border: 2px solid rgb(120,120,120);
     z-index: 10;
-    background-color: rgb(100,100,100);
+    background-color: rgb(70,70,70);
 }
 
 .form-popup input[type=text], .form-popup input[type=password] 
@@ -21,7 +21,7 @@ h1
     width: 100%;
     padding-top: 5px ;
     padding-right: 5px;
-    margin: 5px 0 20px 0;
+    margin: 5px 0 10px 0;
     border: none;
     background:#D8D8D8;
 }
@@ -30,8 +30,9 @@ h1
 {
     margin-left:60px;
     margin-bottom: 10px;
-    background-color:green;
-    color: white;
+    background-color:darkturquoise;
+    color: black;
+    font-weight: bolder;
     padding: 16px 20px;
     border: none;
     cursor: pointer;
@@ -42,7 +43,7 @@ h1
 #cancel 
 {
     margin-left:70px;
-    background-color:rgb(100,100,100);
+    background-color: transparent;
     color: white;
     padding: 10px 10px 10px 10px;
     border: none;
@@ -55,9 +56,10 @@ h1
 
 #open
 {
-    background-color: #7f7f7f;
-    color: white;
-    border: none;
+    background-color: transparent;
+    color: darkturquoise;
+    font-weight: bolder;
+    border: 1px solid darkturquoise;
     cursor: pointer;
     position: fixed;
     top: 1.5%;
@@ -67,6 +69,16 @@ h1
     margin: 3px;
 }
 
+a:link
+{
+    color: darkturquoise;
+}
+
+a:visited
+{
+    color: rgb(84, 152, 255);
+}
+
 body
 {
     margin: 0;
@@ -74,16 +86,28 @@ body
 
 div.header 
 {
+    float: left;
     position: sticky;
     top: 0;
     max-height: 100px;
+    width: 100%;
     padding: 10px 40px;
     background-color: rgb(100,100,100);
 }
 
 div.header img
 {
+    float: left;
     max-height: 80px;
+}
+
+#search input
+{
+    display: block;
+    padding: 8px;
+    margin: 2vw 30vw 1vw;   
+    width: 30%;
+    background-image: url("searchicon.png");
 }
 
 .buttons
@@ -108,6 +132,7 @@ div.header img
 
 div.row
 {
+    clear: left;
     /*border: solid 5px red;*/
     display: flex;
     flex-wrap: nowrap;
@@ -116,12 +141,14 @@ div.row
 
 div.column
 {
+    clear: left;
     float: left;
     padding: 10px;
 }
 
 div.column.side
 {
+    clear: left;
     width: 30%;
     /*border: solid 1px green;*/
     background-color: rgb(100,100,100);
