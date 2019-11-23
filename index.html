@@ -33,34 +33,38 @@
                 <button type="submit" id="cancel" onclick="closePopUp()">X</button>
             </h1>
         
-            <label><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="Username" required>
-        
-            <label><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="Password" required>
+            <input type="text" placeholder="Username" name="Username" required>
+
+            <input type="password" placeholder="Password" name="Password" required>
             
             <div class="btn" >
                 <button type="submit" id="login">Login</button>       
             </div>
 
             <div class="word" style="text-align: center">
-                <a href="">  not a member yet? click here to register</a>
+                <a href="">Not a member yet? Click here to register.</a>
             </div>
         </div>
 
         <div class="login-form" id="loginForm">
-            <button class="open-button" id="open" onclick= "openPopUp()">Log in</button>
+            <button class="open-button" id="open" onclick= "openPopUp()">LOG IN</button>
         </div>
 
         <div class="header">
             <a href="index.html">
                 <img src="img/logo.png" alt="The website logo">
             </a>
+
+            <form id="search">
+                <input id="searchInput" type="text" placeholder="Search">
+            </form>
         </div>
         
         <div class="row">
             <div class="column side">
-                Sort by name, popularity, date, etc.
+                <div class="sort" id="sortPopularity">Sort by popularity</div>
+                <div class="sort" id="sortName">Sort by name</div>
+                <div class="sort" id="sortDate">Sort by date</div>
             </div>
 
             <div class="column main">

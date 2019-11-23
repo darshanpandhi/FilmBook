@@ -92,7 +92,7 @@ div.header
     max-height: 100px;
     width: 100%;
     padding: 10px 40px;
-    background-color: rgb(100,100,100);
+    background-color: rgb(70,70,70);
 }
 
 div.header img
@@ -104,10 +104,16 @@ div.header img
 #search input
 {
     display: block;
-    padding: 8px;
+    padding: 10px;
     margin: 2vw 30vw 1vw;   
     width: 30%;
-    background-image: url("searchicon.png");
+    background-color: rgb(40,40,40);
+    color: white;
+    border: 1px solid rgb(80,80,80);
+    background-image: url("img/searchicon.png");
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: 98%;
 }
 
 .buttons
@@ -151,16 +157,52 @@ div.column.side
     clear: left;
     width: 30%;
     /*border: solid 1px green;*/
-    background-color: rgb(100,100,100);
+    background-color: rgb(70,70,70);
     color: white;
     font-size: large;
+    padding: 0;
+}
+
+.column.side div
+{
+    padding: 10px 0px 10px 50px;
+    margin: 0;
+    /*border: 1px solid red;*/
+}
+
+.column.side div:hover
+{
+    background-color: rgb(100,100,100);
+}
+
+.sort
+{
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: 2%;
+}
+
+#sortPopularity
+{
+    background-color: rgb(100,100,100);
+    background-image: url("img/star.png");
+}
+
+#sortName
+{
+    background-image: url("img/sortname.png");
+}
+
+#sortDate
+{
+    background-image: url("img/sortDate.png");
 }
 
 div.column.main
 {
     /*width: 75%;*/
     /*border: solid 1px blue;*/
-    background-color: rgb(60,60,60)
+    background-color: rgb(50,50,50)
 }
 
 div.poster
@@ -202,6 +244,7 @@ div.footer
     text-align: center;
     font-size: x-large;
     color: white;
+    z-index: 3;
 }
 
 #step1 {
