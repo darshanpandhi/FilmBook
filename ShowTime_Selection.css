@@ -137,21 +137,35 @@ div.footer
 #showtimes {
     color:yellow;
 }
+
+#back {
+    float:left;
+}
+#confirm {
+    float:right;
+}
+
 #back, #confirm {
     background-color: rgb(40, 26, 231);
     color: white;
+    margin:10px;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
   }
 
-  .select {
-      
+  #theatre,#date,#showtime {
+      width:200px;
       float:center;
-      padding:15px;
+      margin:10px;
+      padding:10px;
   }
 
   #showtime,#date,#confirm {
       display:none;
   }
+
+ .navigation {
+     overflow:hidden;
+ }

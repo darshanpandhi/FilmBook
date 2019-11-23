@@ -56,43 +56,36 @@
     
     <div class = "buttons">
                 <h1 id = "showtimes">Choose Theatre and ShowTime </h1>
-                <br>
                 <div class="select" style="width:200px;">
-                        <select id = "theatre" onchange="displayDate();">
-                          <option value="0">Select Theatre:</option>
-                          <option value="1" >Cineplex Odeon Cinemas VIP</option>
-                          <option value="2" >Silvercity St. Vital Cinemas</option>
-                        </select>
-                      </div>
+                    <select id = "theatre" onchange="displayDate();">
+                        <option value="0">Select Theatre:</option>
+                        <option value="1" >Cineplex Odeon Cinemas VIP</option>
+                        <option value="2" >Silvercity St. Vital Cinemas</option>
+                    </select>                 
 
-                <div class="select" style="width:200px;">
                     <select id = date onchange="displayShowtime();"> 
                         <option value="0">Select Date:</option>
                         <option value="1" >November 18th</option>
                         <option value="2" >November 19th</option>
                         <option value="3" >November 20th</option>
                     </select>
-                    </div>
-
-                <div class="select" style="width:200px;">
-                        <select id = showtime onchange="displayConfirm();">
-                            <option value="0">Select Showtime:</option>
-                            <option value="1" >1:30 pm</option>
-                            <option value="2" >5:30pm</option>
-                            <option value="3" >7:30pm</option>
-                        </select>
-                        </div>
-                        <br>
+                
+                    <select id = showtime onchange="displayConfirm();">
+                        <option value="0">Select Showtime:</option>
+                        <option value="1" >1:30 pm</option>
+                        <option value="2" >5:30pm</option>
+                        <option value="3" >7:30pm</option>
+                    </select>
+                </div>
+                
             <div class = "navigation">
                 <a href = "index.html">
                         <button id = "back">Back</button>
                         </a>
                 <a href = "#">
                         <button id = "confirm">Confirm</button>
-                        </a>
-               
+                        </a>               
             </div>
-        
         </div>
 </div>
 
