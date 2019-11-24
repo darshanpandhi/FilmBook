@@ -2,8 +2,10 @@
 {
     width: available;
     height: 50px;
-    border: solid black;
-    background-color: wheat;
+    /*border: solid black;
+    border-color: black;*/
+    border-style: solid;
+    /*background-color: wheat;*/
 }
 
 /*div
