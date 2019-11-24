@@ -8,7 +8,7 @@
         <title>Payment</title>
 
     </head>
-
+    <body>
     <div class="form-popup" id="popUp">
         <h1>Login
             <button type="submit" id="cancel" onclick="closePopUp()">X</button>
@@ -47,7 +47,7 @@
 
         </div>
         <div class="description">
-            <h1 style="font-size: medium">Please select the following payment:</h1>
+            <h1 style="font-size: medium;text-align:center"><br>Please select the following payment:</h1>
             <div class="payment">
                 <img src="img/paypal.jpg" alt="PayPal Logo" onclick="gotoPayPal()">
                 <img src="img/visa.png" alt="Visa Logo" onclick="openPay()">
@@ -81,6 +81,7 @@
     </div>
     <div class="overLay" id="overlay">
     </div>
+</body>
 </div>
 <script>
     function gotoPayPal() {
