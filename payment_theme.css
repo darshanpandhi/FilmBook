@@ -176,13 +176,16 @@ div.header img
     margin: 1%;
     margin-left:auto;
     margin-right: auto;
-    min-height: 150px;
-    min-width:150px;
-    max-height: 150px;
-    max-width: 150px;
+    height: 9vw;
+    width: 16vw;
     cursor: pointer;
-
 }
+
+.payment img:hover
+{
+    border: 1px solid white;
+}
+
 .overLay{
     display: none;
     position: fixed;
@@ -266,8 +269,9 @@ div.header img
     float:right;
 }
 #back, #confirm{
-    background-color: rgb(40, 26, 231);
-    color: white;
+    background-color: darkturquoise;
+    font-weight: bolder;
+    color: black;
     padding: 16px;
     font-size: 16px;
     border: none;

@@ -266,13 +266,19 @@ div.footer
 }
 
 .description {
-    color:black;
+    color:white;
     float:center;
 }
 
 #movie, #cast, #director {
     font-size: x-large;
-    color:lightblue;
+    color:white;
+}
+
+#movie span, #cast span, #director span, #synopsis span
+{
+    font-size: x-large;
+    color: turquoise;
 }
 
 #synopsis {
@@ -282,12 +288,13 @@ div.footer
     font-size: large;
     color:white;
 }
+
 .selection {
     height: 200px;
 }
 
 #showtimes {
-    color:yellow;
+    color:turquoise;
 }
 
 #back {
@@ -298,8 +305,9 @@ div.footer
 }
 
 #back, #confirm {
-    background-color: rgb(40, 26, 231);
-    color: white;
+    background-color: darkturquoise;
+    font-weight: bolder;
+    color: black;
     margin:10px;
     padding: 16px;
     font-size: 16px;

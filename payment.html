@@ -2,6 +2,7 @@
 <div lang="en">
     <head>
         <link rel="stylesheet" type="text/css" href="payment_theme.css">
+        <link rel="stylesheet" type="text/css" href="theme.css">
         <script src="scripts/login.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,6 +38,10 @@
         <a href="index.html">
             <img src="img/logo.png" alt="The website logo">
         </a>
+
+        <form id="search">
+            <input id="searchInput" type="text" placeholder="Search">
+        </form>
     </div>
     <div class="content">
 
@@ -51,25 +56,13 @@
         </div>
 
         <div class="description">
-            <h1 style="font-size: x-large;text-align:center"><br>Please select the following payment:</h1>
+            <h1 style="font-size: x-large;text-align:center"><br>Please select a payment method:</h1>
             <div class="payment">
-                <img src="img/paypal.jpg" alt="PayPal Logo" onclick="gotoPayPal()">
+                <img src="img/paypal.png" alt="PayPal Logo" onclick="gotoPayPal()">
                 <img src="img/visa.png" alt="Visa Logo" onclick="openPay()">
-                <img src="img/master.jpg" alt="Master Logo"  onclick="openPay()">
+                <img src="img/master.png" alt="Master Logo"  onclick="openPay()">
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-            </div>
+        </div>
             <div class="footer">
                 Footer
             </div>
