@@ -120,7 +120,9 @@ div.header img
     max-height: 80px;
 }
 
-
+.navigation {
+    overflow:hidden;
+}
 
 .buttons
 {
@@ -146,17 +148,21 @@ div.header img
 
 .payment
 {
-    margin-left:15%;
+    margin-top:10px;
+    margin-left:35%;
+    margin-right:20%;
     padding:10px;
+
 }
 .payment img
 {
-    margin: 40px;
-    min-height: 200px;
-    min-width:200px;
-    max-height: 200px;
-    max-width: 200px;
+    margin: 20px;
+    min-height: 100px;
+    min-width:100px;
+    max-height: 100px;
+    max-width: 100px;
     cursor: pointer;
+
 }
 .overLay{
     display: none;
@@ -171,10 +177,10 @@ div.header img
 .payPop{
     display: none;
     color:white;
-    padding: 20px 100px 20px 100px;
+    padding: 20px 20px 20px 20px;
     position: fixed;
     top: 20%;
-    left:30%;
+    left:40%;
     z-index: 101;
     max-width: 200px;
     border: 2px solid rgb(120,120,120);

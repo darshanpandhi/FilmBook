@@ -39,6 +39,13 @@
         </a>
     </div>
     <div class="content">
+
+        <div class="description">
+            <img id="step1" src="img/step3.png" alt="Visa Logo" onclick="openPay()">
+            <h1 style="font-size:medium; text-align:center">Confirmation</h1>
+            <p style="color:white;text-align:center">Total amount: $12.00<br>Regular ticket: $10.00<br>GST: $1.50<br>PST: $0.50</p>
+
+        </div>
         <div class="description">
             <h1 style="font-size: medium">Please select the following payment:</h1>
             <div class="payment">
@@ -51,8 +58,8 @@
             </div>
 
             <div class="navigation">
-                <a href="ShowTime_Selection.html">
-                    <button id="back">Back</button>
+                <a href="Seat_Selection.html">
+                    <button id="back" >Back</button>
                 </a>
 
             </div>
@@ -66,10 +73,10 @@
     <div class="payPop" id="pay">
         <button type="submit" id="cancel2" onclick="closePay()" style="font-size:20px" >X</button>
         <h1>Payment</h1>
-
+        <input type="text" placeholder="Please enter your email" name="email" required >
         <input type="text" placeholder="Enter card holder name" name="name" required>
         <input type="text" placeholder="Enter credit card number" name="cr" required>
-        <input type="text" placeholder="Enter CVV" name="cvv" required>
+        <input type="text" placeholder="Enter CVC" name="cvc" required>
         <div class="btn">
             <button type="submit" id="submit"  onclick="gotoConfirm()">submit</button>
         </div>
