@@ -1,0 +1,12 @@
+.rectangle
+{
+    width: available;
+    height: 50px;
+    border: solid black;
+    background-color: wheat;
+}
+
+/*div
+{
+    border: 40px solid black;
+}*/
