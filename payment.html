@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<div lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="payment_theme.css">
+        <script src="scripts/login.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Payment</title>
+
+    </head>
+
+    <div class="form-popup" id="popUp">
+        <h1>Login
+            <button type="submit" id="cancel" onclick="closePopUp()">X</button>
+        </h1>
+
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="Username" required>
+
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="Password" required>
+
+        <div class="btn">
+            <button type="submit" id="login">Login</button>
+        </div>
+
+        <div class="word" style="text-align: center">
+            <a href=""> not a member yet? click here to register</a>
+        </div>
+    </div>
+
+    <div class="login-form" id="loginForm">
+        <button class="open-button" id="open" onclick="openPopUp()">Log in</button>
+    </div>
+
+    <div class="header">
+        <a href="index.html">
+            <img src="img/logo.png" alt="The website logo">
+        </a>
+    </div>
+    <div class="content">
+        <div class="description">
+            <h1 style="font-size: medium">Please select the following payment:</h1>
+            <div class="payment">
+                <a href="confirmation.html">
+                    <img src="img/paypal.jpg" alt="PayPal Logo" onclick="gotoPayPal()">
+                </a>
+                <img src="img/visa.png" alt="Visa Logo" onclick="openPay()">
+                <img src="img/master.jpg" alt="Master Logo"  onclick="openPay()">
+
+            </div>
+
+            <div class="navigation">
+                <a href="ShowTime_Selection.html">
+                    <button id="back">Back</button>
+                </a>
+
+            </div>
+            <div class="footer">
+                Footer
+            </div>
+
+        </div>
+
+    </div>
+    <div class="payPop" id="pay">
+        <button type="submit" id="cancel2" onclick="closePay()" style="font-size:20px" >X</button>
+        <h1>Payment</h1>
+
+        <input type="text" placeholder="Enter card holder name" name="name" required>
+        <input type="text" placeholder="Enter credit card number" name="cr" required>
+        <input type="text" placeholder="Enter CVV" name="cvv" required>
+        <div class="btn">
+            <button type="submit" id="submit"  onclick="gotoConfirm()">submit</button>
+        </div>
+    </div>
+    <div class="overLay" id="overlay">
+    </div>
+</div>
+<script>
+    function gotoPayPal() {
+        window.open("https://www.paypal.com");
+    }
+
+    function gotoConfirm() {
+        window.location.href = "confirm.html";
+    }
+    function closePay(){
+        document.getElementById("pay").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+    }
+    function openPay(){
+        document.getElementById("pay").style.display = "block";
+        document.getElementById("overlay").style.display = "block";
+    }
+
+</script>
+
+
+</body>
+
+</html>
