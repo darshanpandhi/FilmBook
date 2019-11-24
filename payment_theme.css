@@ -82,6 +82,19 @@ h1
     float: right;
     opacity: 1;
 }
+#Home{
+    margin-top:1%;
+    margin-bottom:1%;
+    margin-left:47%;
+    margin-right:50%;
+    background-color:darkturquoise;
+    color: black;
+    font-weight: bolder;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+}
 #open
 {
     background-color: transparent;
