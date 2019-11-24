@@ -2,8 +2,8 @@
     margin:auto;
 }
 body{
-    min-height:100px;
-    min-width:100px;
+    max-width:100%;
+   overflow-x:hidden;
 }
 h1
 {
@@ -83,7 +83,7 @@ h1
     opacity: 1;
 }
 #Home{
-    margin-top:1%;
+    margin-top:3%;
     margin-bottom:1%;
     margin-left:47%;
     margin-right:50%;
@@ -111,10 +111,6 @@ h1
 }
 
 
-body
-{
-    margin: 0;
-}
 
 div.header
 {
@@ -134,6 +130,10 @@ div.header img
 }
 
 .navigation {
+    margin-left:30%;
+    padding-bottom: 2%;
+    padding-left:2%;
+    padding-top:1%;
     overflow:hidden;
 }
 
@@ -161,19 +161,25 @@ div.header img
 
 .payment
 {
-    margin-top:10px;
-    margin-left:35%;
-    margin-right:20%;
+
+    display: block;
+    margin-top:1%;
+
+
     padding:10px;
+
 
 }
 .payment img
 {
-    margin: 20px;
-    min-height: 100px;
-    min-width:100px;
-    max-height: 100px;
-    max-width: 100px;
+    display:block;
+    margin: 1%;
+    margin-left:auto;
+    margin-right: auto;
+    min-height: 150px;
+    min-width:150px;
+    max-height: 150px;
+    max-width: 150px;
     cursor: pointer;
 
 }
@@ -193,7 +199,7 @@ div.header img
     padding: 20px 20px 20px 20px;
     position: fixed;
     top: 20%;
-    left:40%;
+    left:45%;
     z-index: 101;
     max-width: 200px;
     border: 2px solid rgb(120,120,120);
@@ -228,8 +234,6 @@ div.header img
 }
 
 #step1 {
-    width:605px;
-    height:109px;
     display:block;
     margin-left: auto;
     margin-right: auto;
@@ -246,8 +250,9 @@ div.header img
 
 .description {
     color:white;
+
     width:100%;
-    float:center;
+
 }
 
 
@@ -270,7 +275,8 @@ div.header img
 }
 
 
-
-#showtime,#date {
-    display:none;
+.ticket img{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
 }
