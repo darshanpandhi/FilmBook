@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="ShowTime_Selection.css">
+    <link rel="stylesheet" type="text/css" href="theme.css">
     <script src="ShowTime_Selection.js"></script>
     <title>Showtime Selection</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <style>
+        * {
+            margin:auto;
+        }
+    html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+    </style>
+
 </head>
 
 <body>
+<div class = container>
+    <div class="form-popup" id="popUp">
+        <h1>Login
+            <button type="submit" id="cancel" onclick="closePopUp()">X</button>
+        </h1>
+    
+        <input type="text" placeholder="Username" name="Username" required>
 
-<div class="form-popup" id="popUp">
-        <h1>Login</h1>
-        <label><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="Username" required>
-
-        <label><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="Password" required>
+        <input type="password" placeholder="Password" name="Password" required>
+        
         <div class="btn" >
-            <button type="submit" id="login">Login</button>
-            <button type="submit" id="cancel" onclick="closePopUp()">Close</button>
+            <button type="submit" id="login">Login</button>       
         </div>
+
         <div class="word" style="text-align: center">
-            <a href="">  not a member yet? click here to register</a>
+            <a href="">Not a member yet? Click here to register.</a>
         </div>
     </div>
+
     <div class="login-form" id="loginForm">
-        <button class="open-button" id="open" onclick= "openPopUp()">Log in</button>
+        <button class="open-button" id="open" onclick= "openPopUp()">LOG IN</button>
     </div>
+
 <div class = "header">
-<a href="index.html">
+    <a href="index.html">
         <img src="img/logo.png" alt="The website logo">
     </a>
+
+    <form id="search">
+        <input id="searchInput" type="text" placeholder="Search">
+    </form>
 
 </div>
 
@@ -40,13 +58,13 @@
     <div class = "movie_layout">
         <img id = "step1" src = "img/step1.png">
         <br>
-        <img id="poster" src = "weathering with you.jpg" width="1936" height ="2731">
+        <img id="poster" src = "img/poster1.jpg" width="1936" height ="2731" alt = "Weathering With You">
 
         <div class = "description">
-            <h1 id = "movie">Movie: Weathering With You</h1>
-            <h2 id = "director">Director: Makoto Shinkai</h2>
-            <h3 id = "cast">Cast: <br> Hina Amano, Hodaka Morishima, Mitsuha Miyamuzu, Taki Tachibana</h3>
-            <p id = "synopsis">Synopsis - Tokyo is currently experiencing rain showers that seem to disrupt the usual pace of everyone living there to no end. Amidst this seemingly eternal downpour arrives the runaway high school student Hodaka Morishima, who struggles to financially support himself—ending up with a job at a small-time publisher. At the same time, the orphaned Hina Amano also strives to find work to sustain herself and her younger brother.
+            <h1 id = "movie"><span>Movie: </span>Weathering With You</h1>
+            <h2 id = "director"><span>Director: </span>Makoto Shinkai</h2>
+            <h3 id = "cast"><span>Cast: </span>Hina Amano, Hodaka Morishima, Mitsuha Miyamuzu, Taki Tachibana</h3>
+            <p id = "synopsis"><span>Synopsis - </span>Tokyo is currently experiencing rain showers that seem to disrupt the usual pace of everyone living there to no end. Amidst this seemingly eternal downpour arrives the runaway high school student Hodaka Morishima, who struggles to financially support himself—ending up with a job at a small-time publisher. At the same time, the orphaned Hina Amano also strives to find work to sustain herself and her younger brother.
 
                     Both fates intertwine when Hodaka attempts to rescue Hina from shady men, deciding to run away together. Subsequently, Hodaka discovers that Hina has a strange yet astounding power: the ability to call out the sun whenever she prays for it. With Tokyo's unusual weather in mind, Hodaka sees the potential of this ability. He suggests that Hina should become a "sunshine girl"—someone who will clear the sky for people when they need it the most.
                     
@@ -93,5 +111,6 @@
 <div class="footer">
         Footer
     </div>
+</div>
 </body>
 </html>

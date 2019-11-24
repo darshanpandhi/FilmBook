@@ -1,3 +1,4 @@
+
 h1
 {
     margin-top:0px;
@@ -116,25 +117,6 @@ div.header img
     background-position: 98%;
 }
 
-.buttons
-{
-    /*!-- border: 5px solid black;*/
-    clear:left;
-    margin:auto;
-    align-content: center;
-    background-color: rgb(60,60,60);
-    padding: 25px;
-    text-align: center;
-    color: white;
-    display: block;
-}
-
-.content 
-{
-    display:block;
-    margin:auto;
-    background-color: rgb(60,60,60);
-}
 
 div.row
 {
@@ -239,12 +221,31 @@ div.footer
 {
     clear:left;
     background-color: rgb(30,30,30);
-    padding: 50px;
+    padding: 60px;
     bottom: 0;
     text-align: center;
     font-size: x-large;
     color: white;
     z-index: 3;
+}
+
+.buttons
+{
+    /*!-- border: 5px solid black;*/
+    clear:left;
+    margin:auto;
+    align-content: center;
+    background-color: rgb(60,60,60);
+    padding: 25px;
+    text-align: center;
+    color: white;
+    display:block;
+}
+
+.content {
+    display:block;
+    margin:auto;
+    background-color: rgb(60,60,60);
 }
 
 #step1 {
@@ -265,13 +266,19 @@ div.footer
 }
 
 .description {
-    color:black;
+    color:white;
     float:center;
 }
 
 #movie, #cast, #director {
     font-size: x-large;
-    color:lightblue;
+    color:white;
+}
+
+#movie span, #cast span, #director span, #synopsis span
+{
+    font-size: x-large;
+    color: turquoise;
 }
 
 #synopsis {
@@ -281,28 +288,44 @@ div.footer
     font-size: large;
     color:white;
 }
+
 .selection {
     height: 200px;
 }
 
 #showtimes {
-    color:yellow;
+    color:turquoise;
 }
+
+#back {
+    float:left;
+}
+#confirm {
+    float:right;
+}
+
 #back, #confirm {
-    background-color: rgb(40, 26, 231);
-    color: white;
+    background-color: darkturquoise;
+    font-weight: bolder;
+    color: black;
+    margin:10px;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
   }
 
-  .select {
-      
+ #theatre,#date,#showtime {
+      width:200px;
       float:center;
-      padding:15px;
+      margin:10px;
+      padding:10px;
   }
 
   #showtime,#date,#confirm {
       display:none;
   }
+
+ .navigation {
+     overflow:hidden;
+ }
