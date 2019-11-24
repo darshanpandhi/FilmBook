@@ -49,9 +49,7 @@
         <div class="description">
             <h1 style="font-size: medium">Please select the following payment:</h1>
             <div class="payment">
-                <a href="confirmation.html">
-                    <img src="img/paypal.jpg" alt="PayPal Logo" onclick="gotoPayPal()">
-                </a>
+                <img src="img/paypal.jpg" alt="PayPal Logo" onclick="gotoPayPal()">
                 <img src="img/visa.png" alt="Visa Logo" onclick="openPay()">
                 <img src="img/master.jpg" alt="Master Logo"  onclick="openPay()">
 
@@ -86,6 +84,7 @@
 </div>
 <script>
     function gotoPayPal() {
+        window.location.href = "confirm.html";
         window.open("https://www.paypal.com");
     }
 
