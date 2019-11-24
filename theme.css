@@ -116,25 +116,6 @@ div.header img
     background-position: 98%;
 }
 
-.buttons
-{
-    /*!-- border: 5px solid black;*/
-    clear:left;
-    margin:auto;
-    align-content: center;
-    background-color: rgb(60,60,60);
-    padding: 25px;
-    text-align: center;
-    color: white;
-    display: block;
-}
-
-.content 
-{
-    display:block;
-    margin:auto;
-    background-color: rgb(60,60,60);
-}
 
 div.row
 {
@@ -247,6 +228,25 @@ div.footer
     z-index: 3;
 }
 
+.buttons
+{
+    /*!-- border: 5px solid black;*/
+    clear:left;
+    margin:auto;
+    align-content: center;
+    background-color: rgb(60,60,60);
+    padding: 25px;
+    text-align: center;
+    color: white;
+    display:block;
+}
+
+.content {
+    display:block;
+    margin:auto;
+    background-color: rgb(60,60,60);
+}
+
 #step1 {
     width:605px;
     height:109x;
@@ -288,21 +288,35 @@ div.footer
 #showtimes {
     color:yellow;
 }
+
+#back {
+    float:left;
+}
+#confirm {
+    float:right;
+}
+
 #back, #confirm {
     background-color: rgb(40, 26, 231);
     color: white;
+    margin:10px;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
   }
 
-  .select {
-      
+ #theatre,#date,#showtime {
+      width:200px;
       float:center;
-      padding:15px;
+      margin:10px;
+      padding:10px;
   }
 
   #showtime,#date,#confirm {
       display:none;
   }
+
+ .navigation {
+     overflow:hidden;
+ }
