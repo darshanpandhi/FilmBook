@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 
 <html>
-
     <head>
         <style>
+            *
+            {
+                /*border: 1px solid blue;*/
+                box-sizing: border-box;
+            }
+
             .border
             {
-                border-style: solid;
+                border: solid;
             }
 
             .invisible
@@ -16,45 +21,72 @@
 
             .seat
             {
-                width: 20px;
                 height: 20px;
             }
+
+            .premium
+            {
+                border-color: rgba(255, 0, 0, 0);
+                background-color: rgba(255, 0, 0, 0.6);
+            }
+
+            /*.selected*/
+            /*{*/
+            /*    border-color: #4CAF50;*/
+            /*    background-color: #4CAF50;*/
+            /*}*/
+
+            .standard
+            {
+                border-color: rgba(0, 0, 255, 0);
+                background-color: rgba(0, 0, 255, 0.6);
+            }
+
+            .occupied
+            {
+                border-color: #b9b9b9;
+                background-color: #b9b9b9;
+            }
+
+
         </style>
 
         <title>Seat Selection</title>
     </head>
 
     <body>
-        <!-- <div class = "rectangle border">
-            <p> screen</p>
-        </div> -->
-
-        <table  style = "border-spacing: 25px;">
+        <table style = "width: 100%; border-spacing: 25px;">
             <tr>
-                <div class = "border" style = "width: available; height: 50px; text-align: center; text-transform: uppercase;">
-                    <p> screen</p>
-                </div>
+                <td colspan = "11">
+                    <div class = "border"
+                         style = "height: 50px; text-align: center; text-transform: uppercase;">
+                        <p> screen</p>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
             </tr>
 
             <tr>
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
@@ -63,45 +95,45 @@
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
@@ -110,45 +142,45 @@
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border occupied"></div>
                 </td>
 
                 <td>
@@ -157,45 +189,45 @@
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border occupied"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border standard"></div>
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border premium"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border premium"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border premium"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border occupied"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border occupied"></div>
                 </td>
 
                 <td>
@@ -204,45 +236,45 @@
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border premium"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border premium"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border premium"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border premium"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border premium"></div>
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border premium"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border premium"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border premium"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border premium"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border premium"></div>
                 </td>
 
                 <td>
@@ -251,73 +283,124 @@
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border occupied"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border premium"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border premium"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border premium"></div>
                 </td>
 
                 <td>
-                    <div class = "seat border"></div>
+                    <div class = "seat border premium"></div>
                 </td>
             </tr>
 
             <tr>
-                <td>
-                    <div class = "seat border"></div>
-                </td>
-
-                <td>
-                    <div class = "seat border"></div>
-                </td>
-
-                <td>
-                    <div class = "seat border"></div>
-                </td>
-
-                <td>
-                    <div class = "seat border"></div>
-                </td>
-
-                <td>
-                    <div class = "seat border"></div>
-                </td>
-
-                <td>
-                    <!-- This seat will be hidden to signify empty column (walking space) in the seat layout (theatre) -->
-                    <div class = "invisible seat border"></div>
-                </td>
-
-                <td>
-                    <div class = "seat border"></div>
-                </td>
-
-                <td>
-                    <div class = "seat border"></div>
-                </td>
-
-                <td>
-                    <div class = "seat border"></div>
-                </td>
-
-                <td>
-                    <div class = "seat border"></div>
-                </td>
-
-                <td>
-                    <div class = "seat border"></div>
-                </td>
             </tr>
+
+            <tr>
+            </tr>
+
+            <!--            <tr>-->
+            <!--                <td>-->
+            <!--                </td>-->
+
+            <!--                <td>-->
+            <!--                </td>-->
+
+            <!--                <td>-->
+            <!--                </td>-->
+
+            <!--                <td rowspan = "2" colspan = "2">-->
+            <!--                    <div class = "seat border premium" style = "height: 40px"></div>-->
+            <!--                </td>-->
+            <!--                <td rowspan = "2" colspan = "2">-->
+            <!--                    <div class = "seat border standard" style = "height: 40px"></div>-->
+            <!--                </td>-->
+
+            <!--                <td>-->
+            <!--                </td>-->
+
+            <!--                <td>-->
+            <!--                </td>-->
+            <!--            </tr>-->
+
+            <!--            <tr>-->
+            <!--                <td>-->
+            <!--                </td>-->
+
+            <!--                <td>-->
+            <!--                </td>-->
+
+            <!--                <td>-->
+            <!--                </td>-->
+
+            <!--                <td>-->
+            <!--                </td>-->
+
+            <!--                <td>-->
+            <!--                </td>-->
+            <!--            </tr>-->
+
+            <!--            <tr>-->
+            <!--                <td>-->
+            <!--                </td>-->
+
+            <!--                <td>-->
+            <!--                </td>-->
+
+            <!--                <td>-->
+            <!--                </td>-->
+
+            <!--               <td colspan = "2">-->
+            <!--                    <div>-->
+            <!--                        <p style = "margin: 0px; padding:0px; text-align: center">Premium</p>-->
+            <!--                    </div>-->
+            <!--                </td>-->
+
+            <!--                <td colspan = "2">-->
+            <!--                    <div>-->
+            <!--                        <p style = "margin: 0px; padding:0px; text-align: center">Standard</p>-->
+            <!--                    </div>-->
+            <!--                </td>-->
+
+            <!--                <td>-->
+            <!--                </td>-->
+
+            <!--                <td>-->
+            <!--                </td>-->
+            <!--            </tr>-->
+
+
+            <!--            <tr>-->
+            <!--                <td colspan = "11">-->
+            <!--                    <button type = "button">Back</button>-->
+            <!--                    <p style = "display: inline;"></p>-->
+            <!--                    <button type = "button" style = "float: right">Next</button>-->
+            <!--                </td>-->
+            <!--            </tr>-->
+
         </table>
+
+        <div class = "seat border premium" style = " width: 100%; height: 40px; display: inline;"></div>
+        <div class = "seat border standard" style = " height: 40px;  display: inline;"></div>
+
+        <div>
+            <ul style = "list-style-type: none; margin: 0; padding: 0;">
+                <li>Premium</li>
+                <li>Standard</li>
+            </ul>
+        </div>
+
+
     </body>
 
 </html>
