@@ -87,19 +87,21 @@ body
 
 div.header 
 {
-    float: left;
+    /*float: left;*/
     position: sticky;
     top: 0;
     max-height: 100px;
     width: 100%;
-    padding: 10px 40px;
+    /*padding: 10px 0px 10px 40px;*/
     background-color: rgb(70,70,70);
+    overflow: auto;
 }
 
 div.header img
 {
     float: left;
     max-height: 80px;
+    margin: 10px 40px;
 }
 
 #search input
