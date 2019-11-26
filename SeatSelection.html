@@ -77,6 +77,7 @@
 
             #confirmButton
             {
+                display: none;
                 background-color: darkturquoise;
                 font-weight: bolder;
                 color: black;
@@ -356,6 +357,7 @@
         <script>
             function clickOnSeat(id)
             {
+                document.getElementById("confirmButton").style.display="block";
                 if (typeof clickOnSeat.price == "undefined")
                     clickOnSeat.price = 0;
 
@@ -394,6 +396,7 @@
                 //deselectSeat
                 {
                     // changeSeatColor
+                    document.getElementById("confirmButton").style.display="none";
                     document.getElementById(id).classList.remove("selected");
                     clickOnSeat.price -= getPrice(id);
                     if (seatType === "Premium")
