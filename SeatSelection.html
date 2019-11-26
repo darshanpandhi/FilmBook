@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href = "theme.css">
+
+        <style>
+            *
+            {
+                box-sizing: border-box;
+            }
+
+            .border
+            {
+                border: solid black;
+            }
+
+            .invisible
+            {
+                visibility: hidden;
+            }
+
+            .seat
+            {
+                height: 20px;
+            }
+
+            .premium
+            {
+                border-color: rgba(255, 0, 0, 0);
+                background-color: rgba(255, 0, 0, 0.6);
+            }
+
+            .standard
+            {
+                border-color: rgba(0, 0, 255, 0);
+                background-color: rgba(0, 0, 255, 0.6);
+            }
+
+            .occupied
+            {
+                border-color: #b9b9b9;
+                background-color: #b9b9b9;
+            }
+
+            .selected
+            {
+                border-color: darkolivegreen;
+                background-color: darkolivegreen;
+            }
+        </style>
+
+        <title>Seat Selection</title>
+
+
+    </head>
+
+    <body>
+        <div class = "form-popup" id = "popUp">
+            <h1>Login
+                <button type = "submit" id = "cancel" onclick = "closePopUp()">X</button>
+            </h1>
+
+            <label><b>Username</b></label>
+            <input type = "text" placeholder = "Enter Username" name = "Username" required>
+
+            <label><b>Password</b></label>
+            <input type = "password" placeholder = "Enter Password" name = "Password" required>
+
+            <div class = "btn">
+                <button type = "submit" id = "login">Login</button>
+            </div>
+
+            <div class = "word" style = "text-align: center">
+                <a href = ""> not a member yet? click here to register</a>
+            </div>
+        </div>
+
+        <div class = "login-form" id = "loginForm">
+            <button class = "open-button" id = "open" onclick = "openPopUp()">Log in</button>
+        </div>
+
+        <div class = "header">
+            <a href = "index.html">
+                <img src = "img/logo.png" alt = "The website logo">
+            </a>
+        </div>
+
+        <table style = "width: 100%; border-spacing: 25px;">
+            <tr>
+                <td colspan = "11">
+                    <div class = "border"
+                         style = "height: 50px; text-align: center; text-transform: uppercase;">
+                        <p> screen</p>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+            </tr>
+
+
+            <tr>
+                <td id = "A1" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td id = "A2" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td id = "A3" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td id = "A4" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td id = "A5" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td>
+                    <!-- This seat will be hidden to signify empty column (walking space) in the seat layout (theatre) -->
+                    <div class = "invisible seat border"></div>
+                </td>
+
+                <td id = "A6" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td id = "A7" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td id = "A8" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td id = "A9" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td id = "A10" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+            </tr>
+
+
+            <tr>
+                <td id = "B1" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td id = "B2" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td id = "B3" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td id = "B4" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td id = "B5" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td>
+                    <!-- This seat will be hidden to signify empty column (walking space) in the seat layout (theatre) -->
+                    <div class = "invisible seat border"></div>
+                </td>
+
+                <td id = "B6" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td id = "B7" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td id = "B8" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td id = "B9" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td id = "B10" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+            </tr>
+
+            <tr>
+                <td id = "C1" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td id = "C2" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td id = "C3" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td id = "C4" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td>
+                    <div class = "seat border occupied"></div>
+                </td>
+
+                <td>
+                    <!-- This seat will be hidden to signify empty column (walking space) in the seat layout (theatre) -->
+                    <div class = "invisible seat border"></div>
+                </td>
+
+                <td id = "C6" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td id = "C7" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td id = "C8" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+
+                <td>
+                    <div class = "seat border occupied"></div>
+                </td>
+
+                <td id = "C10" class = "seat border standard" onclick = "clickOnSeat(id)"></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class = "seat border premium"></div>
+                </td>
+
+                <td>
+                    <div class = "seat border premium"></div>
+                </td>
+
+                <td>
+                    <div class = "seat border premium"></div>
+                </td>
+
+                <td>
+                    <div class = "seat border occupied"></div>
+                </td>
+
+                <td>
+                    <div class = "seat border occupied"></div>
+                </td>
+
+                <td>
+                    <!-- This seat will be hidden to signify empty column (walking space) in the seat layout (theatre) -->
+                    <div class = "invisible seat border"></div>
+                </td>
+
+                <td>
+                    <div class = "seat border premium"></div>
+                </td>
+
+                <td>
+                    <div class = "seat border premium"></div>
+                </td>
+
+                <td>
+                    <div class = "seat border premium"></div>
+                </td>
+
+                <td>
+                    <div class = "seat border premium"></div>
+                </td>
+
+                <td>
+                    <div class = "seat border premium"></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class = "seat border premium"></div>
+                </td>
+
+                <td>
+                    <div class = "seat border premium"></div>
+                </td>
+
+                <td>
+                    <div class = "seat border premium"></div>
+                </td>
+
+                <td>
+                    <div class = "seat border premium"></div>
+                </td>
+
+                <td>
+                    <div class = "seat border premium"></div>
+                </td>
+
+                <td>
+                    <!-- This seat will be hidden to signify empty column (walking space) in the seat layout (theatre) -->
+                    <div class = "invisible seat border"></div>
+                </td>
+
+                <td>
+                    <div class = "seat border occupied"></div>
+                </td>
+
+                <td>
+                    <div class = "seat border premium"></div>
+                </td>
+
+                <td>
+                    <div class = "seat border premium"></div>
+                </td>
+
+                <td>
+                    <div class = "seat border premium"></div>
+                </td>
+
+                <td id = "E10" class = "seat border premium" onclick = "clickOnSeat(id)"></td>
+            </tr>
+
+            <tr>
+            </tr>
+
+            <tr>
+            </tr>
+
+            <tr>
+                <td colspan = "2" class = "seat border premium"></td>
+
+                <td></td>
+
+                <td colspan = "2" class = "seat border standard"></td>
+
+                <td></td>
+
+                <td colspan = "2" class = "seat border selected"></td>
+
+                <td></td>
+
+                <td colspan = "2" class = "seat border occupied"></td>
+            </tr>
+
+            <tr>
+                <td class = "border" colspan = "2" style = "text-align: center">Premium</td>
+
+                <td></td>
+
+                <td class = "border" colspan = "2" style = "text-align: center">Standard</td>
+
+                <td></td>
+
+                <td class = "border" colspan = "2" style = "text-align: center">Selected</td>
+
+                <td></td>
+
+                <td class = "border" colspan = "2" style = "text-align: center">Occupied</td>
+            </tr>
+
+            <tr></tr>
+
+            <tr>
+                <td>
+                    <button type = "button" style = "width: 100%;">Back</button>
+                </td>
+
+                <td id = "seatInfoBox" colspan = "9" style = "text-align: center;"></td>
+
+                <td>
+                    <button type = "button" style = "width: 100%;">Next</button>
+                </td>
+            </tr>
+        </table>
+
+        <div class="footer">
+            Footer
+        </div>
+
+        <script>
+            function clickOnSeat(id) {
+                if (typeof clickOnSeat.price == "undefined")
+                    clickOnSeat.price = 0;
+
+                if (typeof clickOnSeat.noOfPrem == "undefined")
+                    clickOnSeat.noOfPrem = 0;
+
+                if (typeof clickOnSeat.noOfStan == "undefined")
+                    clickOnSeat.noOfStan = 0;
+
+                var seatType = getSeatType(id);
+
+                if (seatType === "Premium") {
+                    clickOnSeat.noOfPrem++;
+
+                    if (typeof clickOnSeat.premSeatNumberString == "undefined")
+                        clickOnSeat.premSeatNumberString = id;
+                    else
+                        clickOnSeat.premSeatNumberString += ", " + id;
+                } else {
+                    clickOnSeat.noOfStan++;
+
+                    if (typeof clickOnSeat.stanSeatNumberString == "undefined")
+                        clickOnSeat.stanSeatNumberString = id;
+                    else
+                        clickOnSeat.stanSeatNumberString += ", " + id;
+                }
+
+                if (document.getElementById(id).classList.contains("selected"))
+                //deselectSeat
+                {
+                    // changeSeatColor
+                    document.getElementById(id).classList.remove("selected");
+                    clickOnSeat.price -= getPrice(id);
+                } else
+                //selectSeat
+                {
+                    // changeSeatColor
+                    document.getElementById(id).classList.add("selected");
+
+                    //update price
+                    clickOnSeat.price += getPrice(id);
+                }
+
+                //display info on seatInfoBox only if price is 0
+                if (clickOnSeat.price === 0)
+                    document.getElementById("seatInfoBox").innerHTML = "";
+                else {
+                    if (clickOnSeat.noOfPrem === 0) {
+                        if (clickOnSeat.noOfStan === 0)
+                            document.getElementById("seatInfoBox").innerHTML = "";
+                        else
+                            document.getElementById("seatInfoBox").innerHTML = "1 x Standard(" + clickOnSeat.stanSeatNumberString + "), $" + clickOnSeat.price;
+                    } else {
+                        if (clickOnSeat.noOfStan === 0)
+                            document.getElementById("seatInfoBox").innerHTML = "1 x Standard(" + clickOnSeat.PremSeatNumberString + "), $" + clickOnSeat.price;
+                        else
+                            document.getElementById("seatInfoBox").innerHTML = "1 x Premium(" + clickOnSeat.PremSeatNumberString + "), 1 x Standard(" + clickOnSeat.stanSeatNumberString + ")" + id + ", $" + clickOnSeat.price;
+                    }
+                    // document.getElementById("seatInfoBox").innerHTML = "1 x " + seatType + ", " + id + ", $" + clickOnSeat.price;
+                }
+            }
+
+            function getSeatType(id) {
+                if (document.getElementById(id).classList.contains("premium"))
+                    return "Premium";
+                else
+                    return "Standard";
+            }
+
+            function getPrice(id) {
+                if (getSeatType(id) === "Premium")
+                    return 20;
+                else
+                    return 10;
+            }
+        </script>
+
+
+    </body>
+
+</html>
