@@ -329,4 +329,10 @@ div.footer
 
  .navigation {
      overflow:hidden;
+     margin-left: 30%;
+     margin-right: 30%;
+ }
+
+ .select {
+     margin: auto;
  }
