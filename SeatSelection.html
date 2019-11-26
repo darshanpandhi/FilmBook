@@ -355,33 +355,37 @@
         </div>
 
         <script>
+            var counter=0;
             function clickOnSeat(id)
             {
+
                 document.getElementById("confirmButton").style.display="block";
-                if (typeof clickOnSeat.price == "undefined")
+                if (typeof clickOnSeat.price == "undefined") {
+                    counter=0;
                     clickOnSeat.price = 0;
-
-                if (typeof clickOnSeat.noOfPrem == "undefined")
+                }
+                if (typeof clickOnSeat.noOfPrem == "undefined") {
+                    counter=0;
                     clickOnSeat.noOfPrem = 0;
-
-                if (typeof clickOnSeat.noOfStan == "undefined")
+                }
+                if (typeof clickOnSeat.noOfStan == "undefined") {
+                    counter=0;
                     clickOnSeat.noOfStan = 0;
-
+                }
                 var seatType = getSeatType(id);
 
-                if (seatType === "Premium")
+                if (seatType === "Premium"&&!document.getElementById(id).classList.contains("selected"))
                 {
 
-
+                    counter+=1;
                     if (typeof clickOnSeat.premSeatNumberString == "undefined")
                         clickOnSeat.premSeatNumberString = id;
                     else
                         clickOnSeat.premSeatNumberString += ", " + id;
                 }
-                else
+                else if(seatType != "Premium"&&!document.getElementById(id).classList.contains("selected"))
                 {
-
-
+                    counter+=1;
                     if (typeof clickOnSeat.stanSeatNumberString == "undefined")
                         clickOnSeat.stanSeatNumberString = id;
                     else
@@ -396,8 +400,8 @@
                 //deselectSeat
                 {
                     // changeSeatColor
-                    document.getElementById("confirmButton").style.display="none";
                     document.getElementById(id).classList.remove("selected");
+                    counter--;
                     clickOnSeat.price -= getPrice(id);
                     if (seatType === "Premium")
                         clickOnSeat.noOfPrem -= 1;
@@ -417,6 +421,9 @@
 
                     //update price
                     clickOnSeat.price += getPrice(id);
+                }
+                if( counter==0) {
+                    document.getElementById("confirmButton").style.display = "none";
                 }
 
 
