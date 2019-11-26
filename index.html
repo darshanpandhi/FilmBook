@@ -5,26 +5,7 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="scripts/login.js"></script>
-        <script>
-            $(document).ready(function()
-            {
-                $(".poster").mouseenter(function()
-                {
-                    /*$(".name",this).show(500);*/
-                    $(".name",this).animate({
-                        height: "show"
-                    }, 300);
-                });
-
-                $(".poster").mouseleave(function()
-                {
-                    /*$(".name",this).hide(500);*/
-                    $(".name", this).animate({
-                        height: "hide"
-                    }, 300)
-                });
-            });
-        </script> 
+        
         </style>          
     </head>
 
@@ -39,7 +20,9 @@
             <input type="password" placeholder="Password" name="Password" required>
             
             <div class="btn" >
-                <button type="submit" id="login">Login</button>       
+                <a href="index.html">
+                    <button type="submit" id="login">Login</button>   
+                </a>                  
             </div>
 
             <div class="word" style="text-align: center">
