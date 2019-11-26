@@ -1,7 +1,8 @@
 * {
-    margin:auto;
+    /*margin:auto;*/
 }
 body{
+    margin: 0;
     max-width:100%;
    overflow-x:hidden;
 }
@@ -119,7 +120,7 @@ div.header
     top: 0;
     max-height: 100px;
     width: 100%;
-    padding: 10px 40px;
+    /*padding: 10px 40px;*/
     background-color: rgb(100,100,100);
 }
 
@@ -228,7 +229,7 @@ div.header img
 
 .footer
 {
-    clear:left;
+    /*clear:left;*/
     background-color: rgb(30,30,30);
     padding: 50px;
     text-align: center;
