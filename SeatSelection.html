@@ -4,6 +4,8 @@
     <head>
         <link rel = "stylesheet" type = "text/css" href = "theme.css">
 
+        <script src = "scripts/login.js"></script>
+
         <style>
             *
             {
@@ -48,6 +50,23 @@
                 border-color: darkolivegreen;
                 background-color: darkolivegreen;
             }
+
+            /*td*/
+            /*{*/
+            /*    border: solid white;*/
+            /*}*/
+
+            #confirmButton
+            {
+                background-color: darkturquoise;
+                font-weight: bolder;
+                color: black;
+                margin: 10px;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
         </style>
 
         <title>Seat Selection</title>
@@ -55,17 +74,17 @@
 
     </head>
 
-    <body>
+    <body style = "background-color: rgb(60,60,60);">
         <div class = "form-popup" id = "popUp">
             <h1>Login
                 <button type = "submit" id = "cancel" onclick = "closePopUp()">X</button>
             </h1>
 
-            <label><b>Username</b></label>
-            <input type = "text" placeholder = "Enter Username" name = "Username" required>
+            <label><b>Username</b></label> <input type = "text" placeholder = "Enter Username" name = "Username"
+                                                  required>
 
-            <label><b>Password</b></label>
-            <input type = "password" placeholder = "Enter Password" name = "Password" required>
+            <label><b>Password</b></label> <input type = "password" placeholder = "Enter Password" name = "Password"
+                                                  required>
 
             <div class = "btn">
                 <button type = "submit" id = "login">Login</button>
@@ -81,12 +100,12 @@
         </div>
 
         <div class = "header">
-            <a href = "index.html">
-                <img src = "img/logo.png" alt = "The website logo">
-            </a>
+            <a href = "index.html"> <img src = "img/logo.png" alt = "The website logo"> </a>
         </div>
 
-        <table style = "width: 100%; border-spacing: 25px;">
+        <img id="step1" src="img/step2.png" alt="progress bar">
+
+        <table style = "width: 100%; border-spacing: 25px; table-layout: fixed">
             <tr>
                 <td colspan = "11">
                     <div class = "border"
@@ -301,37 +320,44 @@
             </tr>
 
             <tr>
-                <td class = "border" colspan = "2" style = "text-align: center">Premium</td>
+                <td colspan = "2" style = "text-align: center">Premium</td>
 
                 <td></td>
 
-                <td class = "border" colspan = "2" style = "text-align: center">Standard</td>
+                <td colspan = "2" style = "text-align: center">Standard</td>
 
                 <td></td>
 
-                <td class = "border" colspan = "2" style = "text-align: center">Selected</td>
+                <td colspan = "2" style = "text-align: center">Selected</td>
 
                 <td></td>
 
-                <td class = "border" colspan = "2" style = "text-align: center">Occupied</td>
+                <td colspan = "2" style = "text-align: center">Occupied</td>
             </tr>
 
             <tr></tr>
 
             <tr>
-                <td>
-                    <button type = "button" style = "width: 100%;">Back</button>
+                <td colspan = "2">
+                    <a href = "ShowTime_Selection.html">
+                        <button id = "back" type = "button">Back</button>
+                    </a>
                 </td>
 
-                <td id = "seatInfoBox" colspan = "9" style = "text-align: center;"></td>
+                <td id = "seatInfoBox" colspan = "7" style = "text-align: center;"></td>
 
-                <td>
-                    <button type = "button" style = "width: 100%;">Next</button>
+                <td colspan = "2">
+                    <a href = "payment.html">
+                        <button id = "confirmButton" type = "button">
+                            Confirm
+                        </button>
+                    </a>
                 </td>
+
             </tr>
         </table>
 
-        <div class="footer">
+        <div class = "footer">
             Footer
         </div>
 

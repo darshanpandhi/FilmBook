@@ -1,108 +1,122 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="theme.css">
-    <script src="ShowTime_Selection.js"></script>
+    <link rel = "stylesheet" type = "text/css" href = "theme.css">
+    <script src = "ShowTime_Selection.js"></script>
     <title>Showtime Selection</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
 
 </head>
 
 <body>
-<div class = container>
-    <div class="form-popup" id="popUp">
-        <h1>Login
-            <button type="submit" id="cancel" onclick="closePopUp()">X</button>
-        </h1>
-    
-        <input type="text" placeholder="Username" name="Username" required>
+    <div class = "container">
+        <div class = "form-popup" id = "popUp">
+            <h1>Login
+                <button type = "submit" id = "cancel" onclick = "closePopUp()">X</button>
+            </h1>
 
-        <input type="password" placeholder="Password" name="Password" required>
-        
-        <div class="btn" >
-            <a href="ShowTime_Selection.html">
-                <button type="submit" id="login">Login</button>   
-            </a>        
-        </div>
+            <input type = "text" placeholder = "Username" name = "Username" required>
 
-        <div class="word" style="text-align: center">
-            <a href="">Not a member yet? Click here to register.</a>
-        </div>
-    </div>
+            <input type = "password" placeholder = "Password" name = "Password" required>
 
-    <div class="login-form" id="loginForm">
-        <button class="open-button" id="open" onclick= "openPopUp()">LOG IN</button>
-    </div>
+            <div class = "btn">
+                <a href = "ShowTime_Selection.html">
+                    <button type = "submit" id = "login">Login</button>
+                </a>
+            </div>
 
-<div class = "header">
-    <a href="index.html">
-        <img src="img/logo.png" alt="The website logo">
-    </a>
-
-    <form id="search">
-        <input id="searchInput" type="text" placeholder="Search">
-    </form>
-
-</div>
-
-<div class = "content">
-
-    <div class = "movie_layout">
-        <img id = "step1" src = "img/step1.png">
-        <br>
-        <img id="poster" src = "img/poster1.jpg" width="1936" height ="2731" alt = "Weathering With You">
-
-        <div class = "description">
-            <h1 id = "movie"><span>Movie: </span>Weathering With You</h1>
-            <h2 id = "director"><span>Director: </span>Makoto Shinkai</h2>
-            <h3 id = "cast"><span>Cast: </span>Hina Amano, Hodaka Morishima, Mitsuha Miyamuzu, Taki Tachibana</h3>
-            <p id = "synopsis"><span>Synopsis - </span>Tokyo is currently experiencing rain showers that seem to disrupt the usual pace of everyone living there to no end. Amidst this seemingly eternal downpour arrives the runaway high school student Hodaka Morishima, who struggles to financially support himself—ending up with a job at a small-time publisher. At the same time, the orphaned Hina Amano also strives to find work to sustain herself and her younger brother.
-
-                    Both fates intertwine when Hodaka attempts to rescue Hina from shady men, deciding to run away together. Subsequently, Hodaka discovers that Hina has a strange yet astounding power: the ability to call out the sun whenever she prays for it. With Tokyo's unusual weather in mind, Hodaka sees the potential of this ability. He suggests that Hina should become a "sunshine girl"—someone who will clear the sky for people when they need it the most.
-                    
-                    Things begin looking up for them at first. However, it is common knowledge that power always comes with a hefty price...</p>
-        </div>
-    </div>
-    
-    <div class = "buttons">
-                <h1 id = "showtimes">Choose Theatre and Showtime </h1>
-                <div class="select" style="width:200px;">
-                    <select id = "theatre" onchange="displayDate();">
-                        <option value="0">Select Theatre:</option>
-                        <option value="1" >Cineplex Odeon Cinemas VIP</option>
-                        <option value="2" >Silvercity St. Vital Cinemas</option>
-                    </select>                 
-
-                    <select id = date onchange="displayShowtime();"> 
-                        <option value="0">Select Date:</option>
-                        <option value="1" >November 18th</option>
-                        <option value="2" >November 19th</option>
-                        <option value="3" >November 20th</option>
-                    </select>
-                
-                    <select id = showtime onchange="displayConfirm();">
-                        <option value="0">Select Showtime:</option>
-                        <option value="1" >1:30 pm</option>
-                        <option value="2" >5:30pm</option>
-                        <option value="3" >7:30pm</option>
-                    </select>
-                </div>
-                
-            <div class = "navigation">
-                <a href = "index.html">
-                        <button id = "back">Back</button>
-                        </a>
-                <a href = "SeatSelection.html">
-                        <button id = "confirm">Confirm</button>
-                        </a>               
+            <div class = "word" style = "text-align: center">
+                <a href = "">Not a member yet? Click here to register.</a>
             </div>
         </div>
-</div>
+
+        <div class = "login-form" id = "loginForm">
+            <button class = "open-button" id = "open" onclick = "openPopUp()">LOG IN</button>
+        </div>
+
+        <div class = "header">
+            <a href = "index.html"> <img src = "img/logo.png" alt = "The website logo"> </a>
+
+            <form id = "search">
+                <input id = "searchInput" type = "text" placeholder = "Search">
+            </form>
+
+        </div>
+
+        <div class = "content">
+
+            <div class = "movie_layout">
+                <img id = "step1" src = "img/step1.png"> <br> <img id = "poster" src = "img/poster1.jpg" width = "1936"
+                                                                   height = "2731" alt = "Weathering With You">
+
+                <div class = "description">
+                    <h1 id = "movie"><span>Movie: </span>Weathering With You</h1>
+                    <h2 id = "director"><span>Director: </span>Makoto Shinkai</h2>
+                    <h3 id = "cast"><span>Cast: </span>Hina Amano, Hodaka Morishima, Mitsuha Miyamuzu, Taki Tachibana
+                    </h3>
+                    <p id = "synopsis"><span>Synopsis - </span>Tokyo is currently experiencing rain showers that seem to
+                                                               disrupt the usual pace of everyone living there to no
+                                                               end. Amidst this seemingly eternal downpour arrives the
+                                                               runaway high school student Hodaka Morishima, who
+                                                               struggles to financially support himself—ending up with a
+                                                               job at a small-time publisher. At the same time, the
+                                                               orphaned Hina Amano also strives to find work to sustain
+                                                               herself and her younger brother.
+
+                                                               Both fates intertwine when Hodaka attempts to rescue Hina
+                                                               from shady men, deciding to run away together.
+                                                               Subsequently, Hodaka discovers that Hina has a strange
+                                                               yet astounding power: the ability to call out the sun
+                                                               whenever she prays for it. With Tokyo's unusual weather
+                                                               in mind, Hodaka sees the potential of this ability. He
+                                                               suggests that Hina should become a "sunshine
+                                                               girl"—someone who will clear the sky for people when they
+                                                               need it the most.
+
+                                                               Things begin looking up for them at first. However, it is
+                                                               common knowledge that power always comes with a hefty
+                                                               price...</p>
+                </div>
+            </div>
+
+            <div class = "buttons">
+                <h1 id = "showtimes">Choose Theatre and Showtime </h1>
+                <div class = "select" style = "width:200px;">
+                    <select id = "theatre" onchange = "displayDate();">
+                        <option value = "0">Select Theatre:</option>
+                        <option value = "1">Cineplex Odeon Cinemas VIP</option>
+                        <option value = "2">Silvercity St. Vital Cinemas</option>
+                    </select>
+
+                    <select id = "date" onchange = "displayShowtime();">
+                        <option value = "0">Select Date:</option>
+                        <option value = "1">November 18th</option>
+                        <option value = "2">November 19th</option>
+                        <option value = "3">November 20th</option>
+                    </select>
+
+                    <select id = "showtime" onchange = "displayConfirm();">
+                        <option value = "0">Select Showtime:</option>
+                        <option value = "1">1:30 pm</option>
+                        <option value = "2">5:30pm</option>
+                        <option value = "3">7:30pm</option>
+                    </select>
+                </div>
+
+                <div class = "navigation">
+                    <a href = "index.html">
+                        <button id = "back">Back</button>
+                    </a> <a href = "SeatSelection.html">
+                    <button id = "confirm">Confirm</button>
+                </a>
+                </div>
+            </div>
+        </div>
 
 
-<div class="footer">
-        Footer
+        <div class = "footer">
+            Footer
+        </div>
     </div>
-</div>
 </body>
 </html>
