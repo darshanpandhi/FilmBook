@@ -122,7 +122,7 @@
             <a href = "index.html"> <img src = "img/logo.png" alt = "The website logo"> </a>
         </div>
 
-        <img id="step1" src="img/step2.png" alt="progress bar">
+        <img id = "step1" src = "img/step2.png" alt = "progress bar">
 
         <table style = "width: 100%; border-spacing: 25px; table-layout: fixed">
             <tr>
@@ -363,7 +363,7 @@
                     </a>
                 </td>
 
-                <td id = "seatInfoBox" colspan = "7" style = "text-align: center;"></td>
+                <td id = "seatInfoBox" class = "text" colspan = "7" style = "text-align: center;"></td>
 
                 <td colspan = "2">
                     <a href = "payment.html">
@@ -381,7 +381,8 @@
         </div>
 
         <script>
-            function clickOnSeat(id) {
+            function clickOnSeat(id)
+            {
                 if (typeof clickOnSeat.price == "undefined")
                     clickOnSeat.price = 0;
 
@@ -393,15 +394,18 @@
 
                 var seatType = getSeatType(id);
 
-                if (seatType === "Premium") {
-                    clickOnSeat.noOfPrem++;
+                if (seatType === "Premium")
+                {
+
 
                     if (typeof clickOnSeat.premSeatNumberString == "undefined")
                         clickOnSeat.premSeatNumberString = id;
                     else
                         clickOnSeat.premSeatNumberString += ", " + id;
-                } else {
-                    clickOnSeat.noOfStan++;
+                }
+                else
+                {
+
 
                     if (typeof clickOnSeat.stanSeatNumberString == "undefined")
                         clickOnSeat.stanSeatNumberString = id;
@@ -409,49 +413,94 @@
                         clickOnSeat.stanSeatNumberString += ", " + id;
                 }
 
+
+
+
+                // seat selection
                 if (document.getElementById(id).classList.contains("selected"))
                 //deselectSeat
                 {
                     // changeSeatColor
                     document.getElementById(id).classList.remove("selected");
                     clickOnSeat.price -= getPrice(id);
-                } else
+                    if (seatType === "Premium")
+                        clickOnSeat.noOfPrem -= 1;
+                    else
+                        clickOnSeat.noOfStan -= 1;
+                }
+                else
                 //selectSeat
                 {
                     // changeSeatColor
                     document.getElementById(id).classList.add("selected");
 
+                    if (seatType === "Premium")
+                        clickOnSeat.noOfPrem += 1;
+                    else
+                        clickOnSeat.noOfStan += 1;
+
                     //update price
                     clickOnSeat.price += getPrice(id);
                 }
 
-                //display info on seatInfoBox only if price is 0
+
+
+
+                // //display info on seatInfoBox only if price is not 0
+                // if (clickOnSeat.price === 0)
+                //     document.getElementById("seatInfoBox").innerHTML = "";
+                // else
+                // {
+                //     if (clickOnSeat.noOfPrem === 0)
+                //     {
+                //         if (clickOnSeat.noOfStan === 0)
+                //             document.getElementById("seatInfoBox").innerHTML = "";
+                //         else
+                //             document.getElementById("seatInfoBox").innerHTML = clickOnSeat.noOfStan + " x Standard(" + clickOnSeat.stanSeatNumberString + "), $" + clickOnSeat.price;
+                //     }
+                //     else
+                //     {
+                //         if (clickOnSeat.noOfStan === 0)
+                //             document.getElementById("seatInfoBox").innerHTML = clickOnSeat.noOfPrem + " x Premium(" + clickOnSeat.PremSeatNumberString + "), $" + clickOnSeat.price;
+                //         else
+                //             document.getElementById("seatInfoBox").innerHTML = clickOnSeat.noOfPrem + " x Premium(" + clickOnSeat.PremSeatNumberString + "), " + clickOnSeat.noOfStan + " x Standard(" + clickOnSeat.stanSeatNumberString + ")" + id + ", $" + clickOnSeat.price;
+                //     }
+                //     // document.getElementById("seatInfoBox").innerHTML = "1 x " + seatType + ", " + id + ", $" + clickOnSeat.price;
+                // }
+
+                //display info on seatInfoBox only if price is not 0
                 if (clickOnSeat.price === 0)
                     document.getElementById("seatInfoBox").innerHTML = "";
-                else {
-                    if (clickOnSeat.noOfPrem === 0) {
+                else
+                {
+                    if (clickOnSeat.noOfPrem === 0)
+                    {
                         if (clickOnSeat.noOfStan === 0)
                             document.getElementById("seatInfoBox").innerHTML = "";
                         else
-                            document.getElementById("seatInfoBox").innerHTML = "1 x Standard(" + clickOnSeat.stanSeatNumberString + "), $" + clickOnSeat.price;
-                    } else {
+                            document.getElementById("seatInfoBox").innerHTML = clickOnSeat.noOfStan + " x Standard Seat(s), $" + clickOnSeat.price;
+                    }
+                    else
+                    {
                         if (clickOnSeat.noOfStan === 0)
-                            document.getElementById("seatInfoBox").innerHTML = "1 x Standard(" + clickOnSeat.PremSeatNumberString + "), $" + clickOnSeat.price;
+                            document.getElementById("seatInfoBox").innerHTML = clickOnSeat.noOfPrem + " x Premium Seat(s), $" + clickOnSeat.price;
                         else
-                            document.getElementById("seatInfoBox").innerHTML = "1 x Premium(" + clickOnSeat.PremSeatNumberString + "), 1 x Standard(" + clickOnSeat.stanSeatNumberString + ")" + id + ", $" + clickOnSeat.price;
+                            document.getElementById("seatInfoBox").innerHTML = clickOnSeat.noOfPrem + " x Premium(s), " + clickOnSeat.noOfStan + " x Standard Seat(s), $" + clickOnSeat.price;
                     }
                     // document.getElementById("seatInfoBox").innerHTML = "1 x " + seatType + ", " + id + ", $" + clickOnSeat.price;
                 }
             }
 
-            function getSeatType(id) {
+            function getSeatType(id)
+            {
                 if (document.getElementById(id).classList.contains("premium"))
                     return "Premium";
                 else
                     return "Standard";
             }
 
-            function getPrice(id) {
+            function getPrice(id)
+            {
                 if (getSeatType(id) === "Premium")
                     return 20;
                 else
