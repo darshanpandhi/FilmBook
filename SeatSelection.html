@@ -14,7 +14,7 @@
 
             .border
             {
-                border: solid black;
+                border: solid white;
             }
 
             .invisible
@@ -27,28 +27,47 @@
                 height: 20px;
             }
 
+            .text
+            {
+                color: white;
+            }
+
             .premium
             {
-                border-color: rgba(255, 0, 0, 0);
-                background-color: rgba(255, 0, 0, 0.6);
+                /*border-color: rgba(255, 0, 0, 0);*/
+                /*background-color: rgba(255, 0, 0, 0.6);*/
+                /*border-color: hotpink;*/
+                /*background-color: hotpink;*/
+                border-color: mediumslateblue;
+                background-color: mediumslateblue;
+                /*border-color: rosybrown;*/
+                /*background-color: rosybrown;*/
             }
 
             .standard
             {
-                border-color: rgba(0, 0, 255, 0);
-                background-color: rgba(0, 0, 255, 0.6);
+                /*border-color: rgba(0, 0, 255, 0);*/
+                /*background-color: rgba(0, 0, 255, 0.6);*/
+                /*border-color: darkorange;*/
+                /*background-color: darkorange;*/
+                border-color: lightsalmon;
+                background-color: lightsalmon;
             }
 
             .occupied
             {
-                border-color: #b9b9b9;
-                background-color: #b9b9b9;
+                /*border-color: #b9b9b9;*/
+                /*background-color: #b9b9b9;*/
+                border-color: beige;
+                background-color: beige;
             }
 
             .selected
             {
-                border-color: darkolivegreen;
-                background-color: darkolivegreen;
+                /*border-color: darkolivegreen;*/
+                /*background-color: darkolivegreen;*/
+                border-color: yellowgreen;
+                background-color: yellowgreen;
             }
 
             /*td*/
@@ -108,7 +127,7 @@
         <table style = "width: 100%; border-spacing: 25px; table-layout: fixed">
             <tr>
                 <td colspan = "11">
-                    <div class = "border"
+                    <div class = "border text"
                          style = "height: 50px; text-align: center; text-transform: uppercase;">
                         <p> screen</p>
                     </div>
@@ -320,19 +339,19 @@
             </tr>
 
             <tr>
-                <td colspan = "2" style = "text-align: center">Premium</td>
+                <td class = "text" colspan = "2" style = "text-align: center;">Premium</td>
 
                 <td></td>
 
-                <td colspan = "2" style = "text-align: center">Standard</td>
+                <td class = "text" colspan = "2" style = "text-align: center">Standard</td>
 
                 <td></td>
 
-                <td colspan = "2" style = "text-align: center">Selected</td>
+                <td class = "text" colspan = "2" style = "text-align: center">Selected</td>
 
                 <td></td>
 
-                <td colspan = "2" style = "text-align: center">Occupied</td>
+                <td class = "text" colspan = "2" style = "text-align: center">Occupied</td>
             </tr>
 
             <tr></tr>
